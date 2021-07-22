@@ -13,7 +13,6 @@ public class DzFourExemple {
         getB = getA + getB;
         getA = getB - getA;
         getB = getB - getA;
-//        System.out.println(getB);
         System.out.println("Теперь значение 1 = " + getA + " ,а значение 2 = " + getB);
     }
 }
