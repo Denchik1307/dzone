@@ -2,7 +2,7 @@ package tms.homeworkone;
 
 import java.util.Scanner;
 
-public class DzOne {
+public class DzOneExemple {
 
     public static void main(String[] args) {
         // write your code here

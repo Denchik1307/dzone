@@ -2,7 +2,7 @@ package tms.homeworkone;
 
 import java.util.Scanner;
 
-public class DzThree {
+public class DzThreeExemple {
     public static void main(String[] args) {
         System.out.println("Введите размер первой стороны прямоугольика:");
         Scanner inData = new Scanner(System.in);

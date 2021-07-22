@@ -2,7 +2,7 @@ package tms.homeworkone;
 
 import java.util.Scanner;
 
-public class DzFive {
+public class DzFiveExemple {
     public static void main(String[] args) {
         System.out.println("Введите какую-нибудь сумму:");
         Scanner inData = new Scanner(System.in);

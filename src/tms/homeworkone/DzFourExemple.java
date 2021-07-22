@@ -2,7 +2,7 @@ package tms.homeworkone;
 
 import java.util.Scanner;
 
-public class DzFour {
+public class DzFourExemple {
     public static void main(String[] args) {
         System.out.println("Введите первую переменную:");
         Scanner inData = new Scanner(System.in);
