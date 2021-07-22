@@ -9,7 +9,6 @@ public class DzFiveExemple {
         int getCost = inData.nextInt();
         String cost = "Спасибо, с вашего счета будет списано: ";
         cost = cost.concat(getCost + " ");
-        boolean validate = false;
         if (getCost % 10 == 1) {
             cost = cost.concat("рубль.");
         } else if (getCost % 10 == 0 || (getCost % 10 > 4 && getCost % 10 < 9)) {
