@@ -2,7 +2,7 @@ package tms.homeworkone;
 
 import java.util.Scanner;
 
-public class dztoo {
+public class DzToo {
     public static void main(String[] args) {
         System.out.println("Введите число с тройкой в конце:");
         Scanner inData = new Scanner(System.in);

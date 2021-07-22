@@ -2,7 +2,7 @@ package tms.homeworkone;
 
 import java.util.Scanner;
 
-public class dzsix {
+public class DzSix {
     public static void main(String[] args) {
         System.out.println("Введите трёхзначное число:");
         Scanner inData = new Scanner(System.in);
