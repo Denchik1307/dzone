@@ -16,7 +16,7 @@ public class DzFiveExemple {
         } else if (getCost % 10 > 1 && getCost % 10 < 5) {
             cost = cost.concat("рубля.");
         } else {
-            System.out.println("Что-то пошло не так");   //на всякий случай
+            cost = "чёт не так";   //на всякий случай
         }
         System.out.println(cost);
     }
