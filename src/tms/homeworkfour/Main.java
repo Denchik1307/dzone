@@ -8,6 +8,6 @@ public class Main {
 
         //System.out.println(RomeToArabNumber("XMD"));
         RomeToArabNumber numberArab = new RomeToArabNumber();
-        System.out.println(numberArab.romeToArabNumber("mix"));
+        System.out.println(numberArab.romeToArabNumber("xiv"));
     }
 }

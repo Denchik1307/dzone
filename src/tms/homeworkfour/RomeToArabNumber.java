@@ -6,7 +6,10 @@ public final class RomeToArabNumber {
     private int temp = 0;
     private int result = 0;
 
-    public int romeToArabNumber(String roman){
+    protected RomeToArabNumber() {
+    }
+
+    public int romeToArabNumber(String roman) {
         roman = roman.toUpperCase();
         for (int i = 0; i < roman.length(); i++) {
             val = converter(roman.charAt(i));
@@ -14,17 +17,11 @@ public final class RomeToArabNumber {
                 val_next = converter(roman.charAt(i + 1));
             } else val_next = 0;
 
-
-            if (val_next == 0) {
+            if (val_next == 0 || val == val_next || val > val_next) {
                 temp = val;
             } else {
-                if (val > val_next) temp = val;
-                else if (val < val_next) {
-                    temp = val_next - val;
-                    i++;
-                } else {
-                    temp = val;
-                }
+                temp = val_next - val;
+                i++;
             }
             result += temp;
         }
