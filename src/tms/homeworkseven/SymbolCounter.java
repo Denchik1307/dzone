@@ -37,7 +37,6 @@ public class SymbolCounter {
         }
         return result;
     }
-
 //    public void countTwo(String file) throws FileNotFoundException {
 //        BufferedReader result = new BufferedReader(new InputStreamReader(new FileInputStream(new File(file))));
 //        String text = result.lines().collect(Collectors.joining());
