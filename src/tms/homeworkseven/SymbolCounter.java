@@ -2,6 +2,7 @@ package tms.homeworkseven;
 
 import java.io.*;
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class SymbolCounter {
@@ -42,4 +43,17 @@ public class SymbolCounter {
 //        String text = result.lines().collect(Collectors.joining());
 //    }
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SymbolCounter that = (SymbolCounter) o;
+        return Objects.equals(reader, that.reader);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(reader);
+    }
 }
