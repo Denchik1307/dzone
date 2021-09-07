@@ -1,5 +1,7 @@
 package tms.homeworkfour;
 
+import java.sql.Array;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -8,6 +10,8 @@ public class Main {
 
         //System.out.println(RomeToArabNumber("XMD"));
         RomeToArabNumber numberArab = new RomeToArabNumber();
-        System.out.println(numberArab.romeToArabNumber("xiv"));
+        System.out.println(numberArab.romeToArabNumber("mmlii"));
+
+        int myArray[] = {1,2,3};
     }
 }

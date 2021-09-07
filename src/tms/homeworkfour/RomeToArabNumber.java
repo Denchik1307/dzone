@@ -16,7 +16,6 @@ public final class RomeToArabNumber {
             if (i < roman.length() - 1) {
                 val_next = converter(roman.charAt(i + 1));
             } else val_next = 0;
-
             if (val_next == 0 || val == val_next || val > val_next) {
                 temp = val;
             } else {
