@@ -1,17 +1,16 @@
-package tms.homeworkfour;
+package tms.homeworkfour
 
-public final class CheckPalindromString {
+import kotlin.jvm.JvmStatic
+import tms.homeworkfour.CheckPalindromString
+import tms.homeworkfour.RomeToArabNumber
+import java.util.Locale
+import java.lang.StringBuilder
 
-    private final String textToChek;
-
-    public CheckPalindromString(String textToChek) {
-        this.textToChek = textToChek;
-    }
-
-    public boolean palindromBuilder(String textToChek) {
-        String textForCheck = textToChek.replace(" ", "").toLowerCase();
-        StringBuilder text = new StringBuilder(textForCheck);
-        StringBuilder reversText = text.reverse();
-        return (reversText.toString()).equals(textForCheck);
+class CheckPalindromString(private val textToChek: String) {
+    fun palindromBuilder(textToChek: String): Boolean {
+        val textForCheck = textToChek.replace(" ", "").lowercase(Locale.getDefault())
+        val text = StringBuilder(textForCheck)
+        val reversText = text.reverse()
+        return reversText.toString() == textForCheck
     }
 }

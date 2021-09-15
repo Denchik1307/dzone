@@ -1,59 +1,50 @@
-package tms.homeworkfour;
+package tms.homeworkfour
 
-public final class RomeToArabNumber {
-    private int val = 0;
-    private int val_next = 0;
-    private int temp = 0;
-    private int result = 0;
+import kotlin.jvm.JvmStatic
+import tms.homeworkfour.CheckPalindromString
+import tms.homeworkfour.RomeToArabNumber
+import java.util.Locale
+import java.lang.StringBuilder
 
-    protected RomeToArabNumber() {
-    }
-
-    public int romeToArabNumber(String roman) {
-        roman = roman.toUpperCase();
-        for (int i = 0; i < roman.length(); i++) {
-            val = converter(roman.charAt(i));
-            if (i < roman.length() - 1) {
-                val_next = converter(roman.charAt(i + 1));
-            } else val_next = 0;
-
-            if (val_next == 0 || val == val_next || val > val_next) {
-                temp = val;
+class RomeToArabNumber {
+    private var `val` = 0
+    private var val_next = 0
+    private var temp = 0
+    private var result = 0
+    fun romeToArabNumber(roman: String): Int {
+        var roman = roman
+        roman = roman.uppercase(Locale.getDefault())
+        var i = 0
+        while (i < roman.length) {
+            `val` = converter(roman[i])
+            val_next = if (i < roman.length - 1) {
+                converter(roman[i + 1])
+            } else 0
+            if (val_next == 0 || `val` == val_next || `val` > val_next) {
+                temp = `val`
             } else {
-                temp = val_next - val;
-                i++;
+                temp = val_next - `val`
+                i++
             }
-            result += temp;
+            result += temp
+            i++
         }
-        return result;
+        return result
     }
 
-    private int converter(char val) {
-        int a = 0;
-        switch (val) {
-            case 'M':
-                a = 1000;
-                break;
-            case 'D':
-                a = 500;
-                break;
-            case 'C':
-                a = 100;
-                break;
-            case 'L':
-                a = 50;
-                break;
-            case 'X':
-                a = 10;
-                break;
-            case 'V':
-                a = 5;
-                break;
-            case 'I':
-                a = 1;
-                break;
-            default:
+    private fun converter(`val`: Char): Int {
+        var a = 0
+        when (`val`) {
+            'M' -> a = 1000
+            'D' -> a = 500
+            'C' -> a = 100
+            'L' -> a = 50
+            'X' -> a = 10
+            'V' -> a = 5
+            'I' -> a = 1
+            else -> {
+            }
         }
-        return a;
+        return a
     }
 }

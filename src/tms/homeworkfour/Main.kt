@@ -1,13 +1,19 @@
-package tms.homeworkfour;
+package tms.homeworkfour
 
-public class Main {
+import kotlin.jvm.JvmStatic
+import tms.homeworkfour.CheckPalindromString
+import tms.homeworkfour.RomeToArabNumber
+import java.util.Locale
+import java.lang.StringBuilder
 
-    public static void main(String[] args) {
-        CheckPalindromString text = new CheckPalindromString("");
-        System.out.println(text.palindromBuilder("D321 1 2 3d"));
+object Main {
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val text = CheckPalindromString("")
+        println(text.palindromBuilder("D321 1 2 3d"))
 
         //System.out.println(RomeToArabNumber("XMD"));
-        RomeToArabNumber numberArab = new RomeToArabNumber();
-        System.out.println(numberArab.romeToArabNumber("xiv"));
+        val numberArab = RomeToArabNumber()
+        println(numberArab.romeToArabNumber("xiv"))
     }
 }
